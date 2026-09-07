@@ -10,7 +10,7 @@ The website is connected to https://github.com/Natalieslaiman/website.git and pu
 
 Git authentication is configured for this repository through the official GitHub CLI stored at `/Users/natalieslaiman/Documents/Codex/Tools/github-cli`. Keep that support folder: the publishing script uses it through Git's local credential helper. Authentication is stored in owner-readable local configuration because macOS Keychain was unavailable to this session; it is outside the website and is never pushed. To revoke access, remove GitHub CLI from GitHub Settings → Applications.
 
-Commits use your GitHub no-reply email. No account password or token belongs in website files. GitHub issues the HTTPS certificate after DNS is recognized; enable Enforce HTTPS in repository Settings → Pages once available.
+Commits use your GitHub no-reply email. No account password or token belongs in website files. HTTPS is enabled and verified. Both HTTP and www redirect to https://natalieslaiman.com/.
 
 ## Every later update
 Double-click `publish.command` in Finder, or run:

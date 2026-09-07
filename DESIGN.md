@@ -1,0 +1,4 @@
+# Visual direction
+An editorial identity for stage and screen: expressive large serif name, asymmetric work layout, warm paper (#eeeae1), dark ink (#25251f), restrained vermilion (#a83121). Georgia's italic provides contrast to straightforward sans-serif metadata. Fine rules organize content; avoid generic card grids, decorative badges and fabricated social proof.
+The portfolio is an experience surface. Real work imagery should lead as it arrives. Current abstract title art is CSS typography and must not be represented as a production still. First Chances is the confirmed opening project.
+Use semantic landmarks, keyboard focus, readable contrast, responsive single-column layouts and reduced-motion support. No autoplay or animation that delays access. No external font dependency or analytics. Embedded video appears only when configured.

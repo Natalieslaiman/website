@@ -5,30 +5,12 @@ A lightweight, responsive static portfolio for GitHub Pages. No package installa
 ## Preview
 Double-click `preview.command`, or open `index.html` in your browser. The preview script uses the Python 3 already installed on this Mac.
 
-## Connect GitHub once
-The local repository is connected to **https://github.com/Natalieslaiman/website.git**.
+## Connected setup
+The website is connected to https://github.com/Natalieslaiman/website.git and publishes from `main` / root. GitHub has verified ownership of `natalieslaiman.com`. Namecheap has the four GitHub Pages A records and a `www` CNAME to `natalieslaiman.github.io`. Keep the GitHub verification TXT record in place.
 
-Run the first publish from Terminal:
+Git authentication is configured for this repository through the official GitHub CLI stored at `/Users/natalieslaiman/Documents/Codex/Tools/github-cli`. Keep that support folder: the publishing script uses it through Git's local credential helper. Authentication is stored in owner-readable local configuration because macOS Keychain was unavailable to this session; it is outside the website and is never pushed. To revoke access, remove GitHub CLI from GitHub Settings → Applications.
 
-```bash
-cd /Users/natalieslaiman/WEBSITE
-./publish.command "Create personal portfolio"
-```
-
-If Git asks for your identity, set your chosen Git name and verified or private GitHub commit email with `git config user.name` and `git config user.email`. HTTPS authentication requires a credential manager or personal access token, not your GitHub account password. Never store a token in these files.
-
-4. In repository **Settings → Pages**, choose **Deploy from a branch → main → / (root)** and save.
-5. Set the custom domain to **natalieslaiman.com**. `CNAME` in this folder already contains that domain.
-6. At your DNS provider, point the apex (`@`) A records to GitHub Pages:
-
-```
-185.199.108.153
-185.199.109.153
-185.199.110.153
-185.199.111.153
-```
-
-Set `www` as a CNAME to `natalieslaiman.github.io`. Preserve mail/MX/TXT records. Remove only conflicting web hosting A/AAAA records after checking their purpose. Verify the domain in GitHub account Settings → Pages using GitHub's supplied TXT record. Enable **Enforce HTTPS** when GitHub makes it available. DNS changes can take up to 24 hours.
+Commits use your GitHub no-reply email. No account password or token belongs in website files. GitHub issues the HTTPS certificate after DNS is recognized; enable Enforce HTTPS in repository Settings → Pages once available.
 
 ## Every later update
 Double-click `publish.command` in Finder, or run:
